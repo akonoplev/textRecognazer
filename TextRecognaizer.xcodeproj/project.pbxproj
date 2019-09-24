@@ -22,6 +22,7 @@
 		B7C578EC2338AFFD00C725DC /* CropViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C578E32338AFFD00C725DC /* CropViewController.swift */; };
 		B7C578EE2338AFFD00C725DC /* CropRectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C578E52338AFFD00C725DC /* CropRectView.swift */; };
 		B7C578F02338B3F600C725DC /* OrientationAppService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C578EF2338B3F600C725DC /* OrientationAppService.swift */; };
+		B7C578FF2339059C00C725DC /* CameraButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C578FE2339059C00C725DC /* CameraButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		B7C578E42338AFFD00C725DC /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B7C578E52338AFFD00C725DC /* CropRectView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CropRectView.swift; sourceTree = "<group>"; };
 		B7C578EF2338B3F600C725DC /* OrientationAppService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrientationAppService.swift; sourceTree = "<group>"; };
+		B7C578FE2339059C00C725DC /* CameraButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,9 +78,10 @@
 		B731790A232FD6DE0045ED22 /* TextRecognaizer */ = {
 			isa = PBXGroup;
 			children = (
-				B7C578DA2338AFBA00C725DC /* Services */,
 				B731790F232FD6DE0045ED22 /* Main.storyboard */,
 				B7317920232FD9150045ED22 /* ViewControllers */,
+				B7C578FD2339057F00C725DC /* CustomViews */,
+				B7C578DA2338AFBA00C725DC /* Services */,
 				B731791F232FD9050045ED22 /* others */,
 			);
 			path = TextRecognaizer;
@@ -130,6 +133,14 @@
 			name = CropViewController;
 			path = TextRecognaizer/Services/CropViewController;
 			sourceTree = SOURCE_ROOT;
+		};
+		B7C578FD2339057F00C725DC /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				B7C578FE2339059C00C725DC /* CameraButton.swift */,
+			);
+			path = CustomViews;
+			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
@@ -207,6 +218,7 @@
 			files = (
 				B731790E232FD6DE0045ED22 /* ViewController.swift in Sources */,
 				B7C578E72338AFFD00C725DC /* UIImage+Crop.swift in Sources */,
+				B7C578FF2339059C00C725DC /* CameraButton.swift in Sources */,
 				B7C578EE2338AFFD00C725DC /* CropRectView.swift in Sources */,
 				B7C578F02338B3F600C725DC /* OrientationAppService.swift in Sources */,
 				B731790C232FD6DE0045ED22 /* AppDelegate.swift in Sources */,

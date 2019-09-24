@@ -21,7 +21,8 @@ class ViewController: UIViewController {
         let vc = storyboard.instantiateViewController(withIdentifier: "cameraViewController") as! CameraViewController
         vc.view.frame = view.bounds
         vc.view.backgroundColor = UIColor.white
-        self.navigationController?.pushViewController(vc, animated: true)
+        vc.modalPresentationStyle = .overCurrentContext
+        self.navigationController?.present(vc, animated: true, completion: nil)
         //setupCamera()
     }
     

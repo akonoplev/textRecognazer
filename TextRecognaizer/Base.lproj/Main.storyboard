@@ -58,50 +58,59 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H2B-Y5-ynB">
-                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                                <rect key="frame" x="0.0" y="24" width="414" height="872"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="Fid-tI-GF0" appends="YES" id="1pD-d8-hbF"/>
+                                </connections>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HyC-TL-Hsm">
-                                <rect key="frame" x="167" y="802" width="80" height="50"/>
+                            <view alpha="0.29999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LhC-Qf-2RQ">
+                                <rect key="frame" x="0.0" y="762" width="414" height="100"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="80" id="gVS-Pw-V0P"/>
+                                    <constraint firstAttribute="height" constant="100" id="aDr-XH-qTt"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HyC-TL-Hsm" customClass="CameraButton" customModule="TextRecognaizer" customModuleProvider="target">
+                                <rect key="frame" x="182" y="831" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="gVS-Pw-V0P"/>
                                     <constraint firstAttribute="height" constant="50" id="nqa-Oi-cOd"/>
                                 </constraints>
-                                <state key="normal" title="Take">
+                                <state key="normal">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
                                 <connections>
                                     <action selector="didTakePhoto:" destination="3zX-mM-gyz" eventType="touchUpInside" id="Z2e-Wl-rYQ"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="oUu-oN-flx">
-                                <rect key="frame" x="304" y="702" width="100" height="150"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="150" id="mJb-4J-l8V"/>
-                                    <constraint firstAttribute="width" constant="100" id="n2a-V2-mrd"/>
-                                </constraints>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="Uzl-bl-NJ0" firstAttribute="trailing" secondItem="oUu-oN-flx" secondAttribute="trailing" constant="10" id="28I-Md-k3N"/>
-                            <constraint firstItem="Uzl-bl-NJ0" firstAttribute="bottom" secondItem="HyC-TL-Hsm" secondAttribute="bottom" constant="10" id="O6p-2S-Ggy"/>
+                            <constraint firstItem="LhC-Qf-2RQ" firstAttribute="leading" secondItem="Uzl-bl-NJ0" secondAttribute="leading" id="0Wy-LC-npU"/>
+                            <constraint firstItem="Uzl-bl-NJ0" firstAttribute="bottom" secondItem="LhC-Qf-2RQ" secondAttribute="bottom" id="31O-zj-Qri"/>
+                            <constraint firstAttribute="bottom" secondItem="H2B-Y5-ynB" secondAttribute="bottom" id="9I8-SD-opi"/>
                             <constraint firstItem="Uzl-bl-NJ0" firstAttribute="trailing" secondItem="H2B-Y5-ynB" secondAttribute="trailing" id="PEK-4f-UTS"/>
-                            <constraint firstItem="Uzl-bl-NJ0" firstAttribute="bottom" secondItem="oUu-oN-flx" secondAttribute="bottom" constant="10" id="g9d-ot-IZg"/>
-                            <constraint firstItem="H2B-Y5-ynB" firstAttribute="top" secondItem="Uzl-bl-NJ0" secondAttribute="top" id="l9B-gd-Scp"/>
-                            <constraint firstItem="HyC-TL-Hsm" firstAttribute="centerX" secondItem="x61-iG-uDv" secondAttribute="centerX" id="nLW-Io-X3M"/>
-                            <constraint firstAttribute="bottom" secondItem="H2B-Y5-ynB" secondAttribute="bottom" id="pTZ-un-h7z"/>
+                            <constraint firstItem="HyC-TL-Hsm" firstAttribute="centerX" secondItem="x61-iG-uDv" secondAttribute="centerX" id="XbC-2q-L7G"/>
+                            <constraint firstAttribute="bottom" secondItem="HyC-TL-Hsm" secondAttribute="bottom" constant="15" id="ble-z0-8io"/>
+                            <constraint firstItem="LhC-Qf-2RQ" firstAttribute="trailing" secondItem="Uzl-bl-NJ0" secondAttribute="trailing" id="caw-4b-6qM"/>
+                            <constraint firstItem="H2B-Y5-ynB" firstAttribute="top" secondItem="Uzl-bl-NJ0" secondAttribute="top" constant="-20" id="l9B-gd-Scp"/>
                             <constraint firstItem="H2B-Y5-ynB" firstAttribute="leading" secondItem="Uzl-bl-NJ0" secondAttribute="leading" id="xLI-MF-MLb"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Uzl-bl-NJ0"/>
                     </view>
                     <connections>
                         <outlet property="cameraView" destination="H2B-Y5-ynB" id="Nmu-18-5pr"/>
-                        <outlet property="photoImageView" destination="oUu-oN-flx" id="MvB-sb-AcG"/>
                         <outlet property="takePhotoButton" destination="HyC-TL-Hsm" id="wHQ-6g-Grb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r3R-4e-E8G" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="Fid-tI-GF0">
+                    <connections>
+                        <action selector="cameraDidTap:" destination="3zX-mM-gyz" id="E9o-F2-CRu"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1969.5652173913045" y="110.49107142857143"/>
         </scene>
