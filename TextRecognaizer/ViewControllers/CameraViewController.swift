@@ -13,14 +13,13 @@ class CameraViewController: UIViewController {
 
     @IBOutlet weak var cameraView: UIView!
     @IBOutlet weak var takePhotoButton: UIButton!
-    @IBOutlet weak var bottomView: UIView!
     
     var captureSession: AVCaptureSession!
     var stillImageOutput: AVCapturePhotoOutput!
     var videoPreviewLayer: AVCaptureVideoPreviewLayer!
-    var backCamera: AVCaptureDevice?
+    var backCamera: AVCaptureDevice!
     
-    fileprivate var sessionQueue = DispatchQueue(label: "akonoplevQueue")
+    var sessionQueue = DispatchQueue.global(qos: .userInteractive)
     
     
     override func viewDidLoad() {
@@ -47,23 +46,19 @@ class CameraViewController: UIViewController {
         self.captureSession.stopRunning()
     }
     
-    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
-        get {
-            return .portrait
-        }
-    }
-    
     fileprivate func setupSession() {
         captureSession = AVCaptureSession()
-        captureSession.sessionPreset = .hd1280x720
         
+        captureSession.sessionPreset = .hd1920x1080
         backCamera = AVCaptureDevice.default(for: AVMediaType.video)
+
         
-        guard let backCamera = backCamera else {
+        guard let backCamera = AVCaptureDevice.default(for: AVMediaType.video) else {
             print("Unable to access back camera")
             return
         }
         
+
         guard let input = try? AVCaptureDeviceInput(device: backCamera) else { return }
         stillImageOutput = AVCapturePhotoOutput()
         
@@ -77,7 +72,7 @@ class CameraViewController: UIViewController {
         self.defaultFocus(device: backCamera)
         backCamera.unlockForConfiguration()
         
-        
+
         //чтобы не заблокировать пользовательский интерфейс нельзя запускать на главном потоке
         DispatchQueue.global(qos: .userInitiated).async {
             self.captureSession.startRunning()
@@ -102,6 +97,12 @@ class CameraViewController: UIViewController {
         controller.modalPresentationStyle = .overCurrentContext
         self.present(controller, animated: true, completion: nil)
     }
+    
+    fileprivate func showRecognaizeVC(image: UIImage) {
+        let vc = RecognitionViewController(image: image)
+        self.present(vc, animated: true, completion: nil)
+    }
+
 }
 
 //adding to image
@@ -116,7 +117,7 @@ extension CameraViewController: AVCapturePhotoCaptureDelegate {
         guard let imageData = photo.fileDataRepresentation() else
         { return }
         
-        guard let image = UIImage(data: imageData) else { return  }
+        guard let image = UIImage(data: imageData) else { return }
         cropImage(image: image)
     }
 }
@@ -124,7 +125,9 @@ extension CameraViewController: AVCapturePhotoCaptureDelegate {
 //MARK: Crop delegate
 extension CameraViewController: CropViewControllerDelegate {
     func cropViewController(_ controller: CropViewController, didFinishCroppingImage image: UIImage) {
-        self.dismiss(animated: true, completion: nil)
+        self.dismiss(animated: true, completion: {
+            self.showRecognaizeVC(image: image)
+        })
     }
     
     func cropViewController(_ controller: CropViewController, didFinishCroppingImage image: UIImage, transform: CGAffineTransform, cropRect: CGRect) {
@@ -134,11 +137,9 @@ extension CameraViewController: CropViewControllerDelegate {
     func cropViewControllerDidCancel(_ controller: CropViewController) {
         
     }
-    
-    
 }
 
-//MARK: - Other
+//MARK: - Focus
 extension CameraViewController {
     @IBAction func cameraDidTap(_ sender: Any) {
         if videoPreviewLayer != nil {
@@ -168,11 +169,9 @@ extension CameraViewController {
                    do {
                        try camera.lockForConfiguration()
                        if camera.isFocusPointOfInterestSupported {
-                           //Logger.log("focus point (x,y): \(focusPoint.x) \(focusPoint.y)")
                            camera.focusPointOfInterest = focusPoint
                        }
                     if camera.isFocusModeSupported(.continuousAutoFocus) {
-                        //Logger.log(".continuousAutoFocus")
                         camera.focusMode = .autoFocus
                     }
                        camera.unlockForConfiguration()
@@ -202,3 +201,4 @@ extension CameraViewController {
            }
        }
 }
+

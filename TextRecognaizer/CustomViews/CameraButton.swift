@@ -5,7 +5,6 @@
 //  Created by Andrei Konoplev on 23/09/2019.
 //  Copyright © 2019 Коноплев Андрей. All rights reserved.
 //
-
 import Foundation
 import UIKit
 

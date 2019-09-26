@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		816FCC2B9BA06AB0FFD9030B /* Pods_TextRecognaizer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01C17637440BEE82AF7B8E34 /* Pods_TextRecognaizer.framework */; };
 		B731790C232FD6DE0045ED22 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B731790B232FD6DE0045ED22 /* AppDelegate.swift */; };
 		B731790E232FD6DE0045ED22 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B731790D232FD6DE0045ED22 /* ViewController.swift */; };
-		B7317911232FD6DE0045ED22 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B731790F232FD6DE0045ED22 /* Main.storyboard */; };
 		B7317913232FD6DF0045ED22 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B7317912232FD6DF0045ED22 /* Assets.xcassets */; };
 		B7317916232FD6DF0045ED22 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7317914232FD6DF0045ED22 /* LaunchScreen.storyboard */; };
 		B731791E232FD8DF0045ED22 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B731791D232FD8DF0045ED22 /* CameraViewController.swift */; };
@@ -22,14 +22,18 @@
 		B7C578EC2338AFFD00C725DC /* CropViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C578E32338AFFD00C725DC /* CropViewController.swift */; };
 		B7C578EE2338AFFD00C725DC /* CropRectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C578E52338AFFD00C725DC /* CropRectView.swift */; };
 		B7C578F02338B3F600C725DC /* OrientationAppService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C578EF2338B3F600C725DC /* OrientationAppService.swift */; };
-		B7C578FF2339059C00C725DC /* CameraButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C578FE2339059C00C725DC /* CameraButton.swift */; };
+		B7E792F5233CBE760028660D /* RecognitionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E792F4233CBE760028660D /* RecognitionViewController.swift */; };
+		B7E7930B233CBE8F0028660D /* ScaledElementProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E79301233CBE8F0028660D /* ScaledElementProcessor.swift */; };
+		B7E7930F233CC1800028660D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7E7930E233CC1800028660D /* Main.storyboard */; };
+		B7E79311233CC1D00028660D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B7E79310233CC1D00028660D /* GoogleService-Info.plist */; };
+		B7E79314233CC25C0028660D /* CameraButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E79313233CC25C0028660D /* CameraButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		01C17637440BEE82AF7B8E34 /* Pods_TextRecognaizer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TextRecognaizer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7317908232FD6DE0045ED22 /* TextRecognaizer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TextRecognaizer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B731790B232FD6DE0045ED22 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B731790D232FD6DE0045ED22 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		B7317910232FD6DE0045ED22 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B7317912232FD6DF0045ED22 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B7317915232FD6DF0045ED22 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B7317917232FD6DF0045ED22 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -45,7 +49,13 @@
 		B7C578E42338AFFD00C725DC /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B7C578E52338AFFD00C725DC /* CropRectView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CropRectView.swift; sourceTree = "<group>"; };
 		B7C578EF2338B3F600C725DC /* OrientationAppService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrientationAppService.swift; sourceTree = "<group>"; };
-		B7C578FE2339059C00C725DC /* CameraButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraButton.swift; sourceTree = "<group>"; };
+		B7E792F4233CBE760028660D /* RecognitionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecognitionViewController.swift; sourceTree = "<group>"; };
+		B7E79301233CBE8F0028660D /* ScaledElementProcessor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ScaledElementProcessor.swift; path = TextRecognaizer/Services/ScaledElementProcessor.swift; sourceTree = SOURCE_ROOT; };
+		B7E7930E233CC1800028660D /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		B7E79310233CC1D00028660D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		B7E79313233CC25C0028660D /* CameraButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraButton.swift; sourceTree = "<group>"; };
+		DF6970F143FC44C75D57AFD6 /* Pods-TextRecognaizer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TextRecognaizer.debug.xcconfig"; path = "Target Support Files/Pods-TextRecognaizer/Pods-TextRecognaizer.debug.xcconfig"; sourceTree = "<group>"; };
+		FE603C6834476F9D759B2624 /* Pods-TextRecognaizer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TextRecognaizer.release.xcconfig"; path = "Target Support Files/Pods-TextRecognaizer/Pods-TextRecognaizer.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,17 +63,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				816FCC2B9BA06AB0FFD9030B /* Pods_TextRecognaizer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		27872EAF80A0ED8A1FD646A4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				01C17637440BEE82AF7B8E34 /* Pods_TextRecognaizer.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8629D0322B08E4AD69E8EE66 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DF6970F143FC44C75D57AFD6 /* Pods-TextRecognaizer.debug.xcconfig */,
+				FE603C6834476F9D759B2624 /* Pods-TextRecognaizer.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		B73178FF232FD6DE0045ED22 = {
 			isa = PBXGroup;
 			children = (
 				B731790A232FD6DE0045ED22 /* TextRecognaizer */,
 				B7317909232FD6DE0045ED22 /* Products */,
+				8629D0322B08E4AD69E8EE66 /* Pods */,
+				27872EAF80A0ED8A1FD646A4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -78,11 +108,12 @@
 		B731790A232FD6DE0045ED22 /* TextRecognaizer */ = {
 			isa = PBXGroup;
 			children = (
-				B731790F232FD6DE0045ED22 /* Main.storyboard */,
+				B7E7930E233CC1800028660D /* Main.storyboard */,
 				B7317920232FD9150045ED22 /* ViewControllers */,
-				B7C578FD2339057F00C725DC /* CustomViews */,
+				B7E79312233CC2460028660D /* CustomViews */,
 				B7C578DA2338AFBA00C725DC /* Services */,
 				B731791F232FD9050045ED22 /* others */,
+				B7E79310233CC1D00028660D /* GoogleService-Info.plist */,
 			);
 			path = TextRecognaizer;
 			sourceTree = "<group>";
@@ -103,6 +134,7 @@
 			children = (
 				B731790D232FD6DE0045ED22 /* ViewController.swift */,
 				B731791D232FD8DF0045ED22 /* CameraViewController.swift */,
+				B7E792F4233CBE760028660D /* RecognitionViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -112,6 +144,7 @@
 			children = (
 				B7C578DB2338AFFD00C725DC /* CropViewController */,
 				B7C578EF2338B3F600C725DC /* OrientationAppService.swift */,
+				B7E79301233CBE8F0028660D /* ScaledElementProcessor.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -134,10 +167,10 @@
 			path = TextRecognaizer/Services/CropViewController;
 			sourceTree = SOURCE_ROOT;
 		};
-		B7C578FD2339057F00C725DC /* CustomViews */ = {
+		B7E79312233CC2460028660D /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
-				B7C578FE2339059C00C725DC /* CameraButton.swift */,
+				B7E79313233CC25C0028660D /* CameraButton.swift */,
 			);
 			path = CustomViews;
 			sourceTree = "<group>";
@@ -149,9 +182,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B731791A232FD6DF0045ED22 /* Build configuration list for PBXNativeTarget "TextRecognaizer" */;
 			buildPhases = (
+				5670723F5188B9B7C258D9A1 /* [CP] Check Pods Manifest.lock */,
 				B7317904232FD6DE0045ED22 /* Sources */,
 				B7317905232FD6DE0045ED22 /* Frameworks */,
 				B7317906232FD6DE0045ED22 /* Resources */,
+				F46815ACD406FE081C4D3775 /* [CP] Embed Pods Frameworks */,
+				46BFF580586D70C2C04EBE4B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -203,28 +239,110 @@
 				B7C578E62338AFFD00C725DC /* PhotoCropEditorBorder@2x.png in Resources */,
 				B7C578E82338AFFD00C725DC /* PhotoCropEditorBorder@3x.png in Resources */,
 				B7317916232FD6DF0045ED22 /* LaunchScreen.storyboard in Resources */,
+				B7E7930F233CC1800028660D /* Main.storyboard in Resources */,
 				B7C578E92338AFFD00C725DC /* PhotoCropEditorBorder.png in Resources */,
 				B7317913232FD6DF0045ED22 /* Assets.xcassets in Resources */,
-				B7317911232FD6DE0045ED22 /* Main.storyboard in Resources */,
+				B7E79311233CC1D00028660D /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		46BFF580586D70C2C04EBE4B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TextRecognaizer/Pods-TextRecognaizer-resources.sh",
+				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseMLVisionTextModel/GoogleMVTextDetectorResources.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleMVTextDetectorResources.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TextRecognaizer/Pods-TextRecognaizer-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5670723F5188B9B7C258D9A1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TextRecognaizer-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F46815ACD406FE081C4D3775 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TextRecognaizer/Pods-TextRecognaizer-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleAPIClientForREST/GoogleAPIClientForREST.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleAPIClientForREST.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TextRecognaizer/Pods-TextRecognaizer-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B7317904232FD6DE0045ED22 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B7E792F5233CBE760028660D /* RecognitionViewController.swift in Sources */,
 				B731790E232FD6DE0045ED22 /* ViewController.swift in Sources */,
 				B7C578E72338AFFD00C725DC /* UIImage+Crop.swift in Sources */,
-				B7C578FF2339059C00C725DC /* CameraButton.swift in Sources */,
 				B7C578EE2338AFFD00C725DC /* CropRectView.swift in Sources */,
+				B7E7930B233CBE8F0028660D /* ScaledElementProcessor.swift in Sources */,
 				B7C578F02338B3F600C725DC /* OrientationAppService.swift in Sources */,
 				B731790C232FD6DE0045ED22 /* AppDelegate.swift in Sources */,
 				B731791E232FD8DF0045ED22 /* CameraViewController.swift in Sources */,
 				B7C578EA2338AFFD00C725DC /* CropView.swift in Sources */,
 				B7C578EB2338AFFD00C725DC /* ResizeControl.swift in Sources */,
+				B7E79314233CC25C0028660D /* CameraButton.swift in Sources */,
 				B7C578EC2338AFFD00C725DC /* CropViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -232,14 +350,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		B731790F232FD6DE0045ED22 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				B7317910232FD6DE0045ED22 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		B7317914232FD6DF0045ED22 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -369,6 +479,7 @@
 		};
 		B731791B232FD6DF0045ED22 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DF6970F143FC44C75D57AFD6 /* Pods-TextRecognaizer.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -387,6 +498,7 @@
 		};
 		B731791C232FD6DF0045ED22 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FE603C6834476F9D759B2624 /* Pods-TextRecognaizer.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

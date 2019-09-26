@@ -254,7 +254,7 @@ extension CropViewController {
         
         //doneButton
         let doneButton = UIButton(frame: CGRect(x: UIScreen.main.bounds.width - 105, y: 0, width: 100, height: 45))
-        doneButton.setTitle("Найти", for: .normal)
+        doneButton.setTitle("Сохранить", for: .normal)
         doneButton.titleLabel?.textColor = UIColor.white
         doneButton.backgroundColor = UIColor.clear
         doneButton.addTarget(self, action: #selector(CropViewController.done(_:)), for: .touchUpInside)
