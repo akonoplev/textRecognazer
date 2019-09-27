@@ -23,26 +23,8 @@ class ViewController: UIViewController {
         vc.view.backgroundColor = UIColor.white
         vc.modalPresentationStyle = .overCurrentContext
         self.navigationController?.present(vc, animated: true, completion: nil)
-        //setupCamera()
     }
-    
-//    fileprivate func setupCamera() {
-//        if UIImagePickerController.isSourceTypeAvailable(.camera) {
-//            let imagePicker = UIImagePickerController()
-//            imagePicker.delegate = self
-//            imagePicker.sourceType = .camera
-//            imagePicker.allowsEditing = false
-//            self.present(imagePicker, animated: true, completion:  nil)
-//        }
-//    }
 }
 
-//extension ViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-//    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-//        picker.dismiss(animated: true, completion: nil)
-//        
-//        let image = info[UIImagePickerController.InfoKey.originalImage] as! UIImage
-//    }
-//}
 
 

@@ -135,7 +135,7 @@ extension CameraViewController: CropViewControllerDelegate {
     }
     
     func cropViewControllerDidCancel(_ controller: CropViewController) {
-        
+        self.dismiss(animated: true, completion: nil)
     }
 }
 

@@ -14,7 +14,10 @@ class ScaledElementProcessor {
     var textRecognizer: VisionTextRecognizer!
     
     init() {
+//        let options = VisionCl
+//        options.languageHints = ["ru"]
         textRecognizer = vision.onDeviceTextRecognizer()
+        
     }
     
     func process(in imageView: UIImageView, completion: @escaping (_ text: String)-> Void) {
