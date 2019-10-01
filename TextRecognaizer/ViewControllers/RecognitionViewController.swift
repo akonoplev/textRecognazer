@@ -50,7 +50,7 @@ class RecognitionViewController: UIViewController {
         textView.topAnchor.constraint(equalTo: photoView.bottomAnchor, constant: 15).isActive = true
         textView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -10).isActive = true
         textView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10).isActive = true
-        textView.heightAnchor.constraint(greaterThanOrEqualToConstant: 20).isActive = true
+        textView.bottomAnchor.constraint(equalToSystemSpacingBelow: view.bottomAnchor, multiplier: -10).isActive = true
         
     }
     
